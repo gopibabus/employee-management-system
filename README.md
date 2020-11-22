@@ -22,7 +22,9 @@ composer install
 ```
 php artisan serve
 ```
-> If you need GUI representation, visit `app-url.com/~artisan`
+
+### For GUI representation of all artisan commands
+> Visit `app-url.com/~artisan`
 
 ### To run migrations and setup database
 ```
