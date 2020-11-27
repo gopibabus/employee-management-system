@@ -10,6 +10,7 @@ jobs:
   laravel-tests:
 
     runs-on: ubuntu-latest
+    name: PHP Unit Test Cases
 
     steps:
     - uses: actions/checkout@v2
@@ -28,3 +29,15 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
+
+  phpinsights:
+
+    runs-on: ubuntu-latest
+    name: PHP Insights checks
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shivammathur/setup-php@v1
+        with:
+          php-version: 7.4
+      - run: composer install --prefer-dist --no-progress --no-suggest
+      - run: vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95 --disable-security-check -n --ansi --format=github-action
