@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 return [
@@ -14,7 +15,7 @@ return [
     */
     'middlewares' => [
         'web',
-//        'auth'
+        //        'auth'
     ],
 
     /*
@@ -152,10 +153,10 @@ return [
         ],
         'view' => [
             'view:cache',
-            'view:clear'
+            'view:clear',
         ],
         'phpInsights' => [
-            'insights'
+            'insights',
         ],
-    ]
+    ],
 ];
