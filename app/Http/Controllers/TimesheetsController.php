@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Http\Controllers;
-
 
 class TimesheetsController extends Controller
 {
@@ -25,5 +23,4 @@ class TimesheetsController extends Controller
     {
         return view('timesheets');
     }
-
 }
